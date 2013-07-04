@@ -1,5 +1,6 @@
 FuzzyComputingMachine::Application.routes.draw do
 
-  root 'home#index'
+  resources :queries
 
+  root 'home#index'
 end

@@ -11,6 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130704015426) do
+
+  create_table "queries", force: true do |t|
+    t.string   "input"
+    t.text     "synopsis"
+    t.string   "interpretation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "queries", ["input"], name: "index_queries_on_input", unique: true, using: :btree
 
 end
