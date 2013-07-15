@@ -25,7 +25,6 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    addressable (2.3.5)
     arel (4.0.0)
     atomic (1.1.10)
     awesome_print (1.1.0)
@@ -34,6 +33,7 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    birch (0.0.8)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
     builder (3.1.4)
@@ -87,11 +87,6 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mashape (2.0.9)
-      addressable
-      json
-      rest-client
-      ruby-hmac
     meta_request (0.2.7)
       callsite
       rack-contrib
@@ -104,6 +99,7 @@ GEM
       mini_portile (~> 0.5.0)
     pg (0.15.1)
     polyglot (0.3.3)
+    progressbar (0.20.0)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
@@ -127,14 +123,15 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
-    ruby-hmac (0.4.0)
+    rubyzip (0.9.9)
     sass (3.2.9)
     sass-rails (4.0.0)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
+    schiphol (0.9.4)
+      progressbar (>= 0.10.0)
+      rubyzip (>= 0.9.6.1)
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
@@ -155,6 +152,10 @@ GEM
     thread_safe (0.1.0)
       atomic
     tilt (1.4.1)
+    treat (2.0.7)
+      birch
+      schiphol
+      yomu
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
@@ -166,6 +167,8 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     wolfram-alpha (0.3)
       nokogiri
+    yomu (0.1.6)
+      mime-types (~> 1.23)
 
 PLATFORMS
   ruby
@@ -184,7 +187,6 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails
-  mashape
   meta_request
   pg
   quiet_assets
@@ -192,6 +194,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.0)
   sdoc
   thin
+  treat
   turbolinks
   uglifier (>= 1.3.0)
   wolfram-alpha

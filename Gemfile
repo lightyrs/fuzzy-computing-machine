@@ -15,7 +15,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'duck-duck-go'
 gem 'wolfram-alpha'
 gem 'crunchbase'
-gem 'mashape'
+gem 'treat'
 
 group :doc do
   gem 'sdoc', require: false
